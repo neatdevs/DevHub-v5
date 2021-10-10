@@ -1,0 +1,76 @@
+local local_player = game.Players.LocalPlayer
+local soundboard_id = '7196595323'
+local soundboard_data = {
+[0.50]='bruh';
+[1.00]='bonk';
+[1.60]='oh he need some milk';
+[5.25]='dun dun dunnn';
+[9.17]='this is a certified hood classic';
+[12.20]='whoomp whoomp whoomp';
+[17.00]='mom get the camera';
+[20.80]='Run it back!!';
+[21.80]='Run it back!!';
+[24.00]='Run it back!!';
+[25.00]='Run it back!!';
+[27.70]='denied';
+}
+local ordered_list = {
+    
+}
+for i,v in pairs(soundboard_data) do
+    table.insert(ordered_list,i)
+end
+table.sort(ordered_list)
+
+local function boom_box()
+   return local_player.Backpack:FindFirstChild("BoomBox") or (local_player.Character and local_player.Character:FindFirstChild("BoomBox")) 
+end
+
+local function set_boombox_id(boombox,id)
+   while not boombox.Handle:WaitForChild("Sound").SoundId:match(tostring(id)) do
+       wait()
+       boombox.Remote:FireServer("PlaySong",id)
+   end
+
+  return 
+end
+local function chat(msg)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
+end
+local function set_boombox_pos(boombox,pos)
+   boombox.Handle.Sound.TimePosition = pos
+end
+local function play_sound(index)
+    local sound_pos = ordered_list[index]
+    if not boom_box() then return end
+    local bb = boom_box()
+    bb.Parent = local_player.Character
+    set_boombox_id(bb,soundboard_id)
+    set_boombox_pos(bb,sound_pos)
+    bb.Handle.Sound.Playing = true
+    chat(soundboard_data[sound_pos])
+    while bb.Handle.Sound.TimePosition < (ordered_list[index+1] or 0) do
+        game:GetService("RunService").RenderStepped:Wait() 
+    end
+        bb.Handle.Sound.Playing = false
+end
+local ek = Enum.KeyCode
+local inputs = {
+    ek.KeypadOne,
+    ek.KeypadTwo,
+    ek.KeypadThree,
+    ek.KeypadFour,
+    ek.KeypadFive,
+    ek.KeypadSix,
+    ek.KeypadSeven,
+    ek.KeypadEight,
+}
+
+local uis = game:GetService("UserInputService")
+
+uis.InputBegan:Connect(function(input)
+    local finded = table.find(inputs,input.KeyCode)
+    if finded then
+       play_sound(finded)
+    end
+end)
