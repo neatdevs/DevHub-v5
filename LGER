@@ -1,0 +1,868 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Funeral_Parlor_Console = Instance.new("ScreenGui")
+local Open = Instance.new("TextButton")
+local Console = Instance.new("TextLabel")
+local MainFrame = Instance.new("Frame")
+local OptionsTab = Instance.new("Frame")
+local Tab_Client = Instance.new("TextButton")
+local Tab_Clear = Instance.new("TextButton")
+local TabFrame = Instance.new("Frame")
+local ClientLog = Instance.new("ScrollingFrame")
+local scroll = Instance.new("ScrollingFrame")
+local blankLine = Instance.new("TextLabel")
+local SideFrame = Instance.new("Frame")
+local Exit = Instance.new("TextButton")
+local Image = Instance.new("ImageLabel")
+local Drag = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local ToggleOptionsTab = Instance.new("Frame")
+local Chats = Instance.new("TextButton")
+local Teams = Instance.new("TextButton")
+local Exploitings = Instance.new("TextButton")
+local Equipments = Instance.new("TextButton")
+local Connections = Instance.new("TextButton")
+local SelfLogs = Instance.new("TextButton")
+
+--Properties:
+
+Funeral_Parlor_Console.Name = "Funeral_Parlor_Console"
+Funeral_Parlor_Console.Parent = game.CoreGui
+
+Open.Name = "Open"
+Open.Parent = Funeral_Parlor_Console
+Open.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Open.BackgroundTransparency = 0.500
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0.00800000504, 0, 0.017077798, 0)
+Open.Size = UDim2.new(0.0919999927, 0, 0.0329222046, 0)
+Open.Visible = false
+Open.AutoButtonColor = false
+Open.Text = "Dev Console"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextStrokeTransparency = 0.200
+Open.TextWrapped = true
+
+Console.Name = "Console"
+Console.Parent = Funeral_Parlor_Console
+Console.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Console.BackgroundTransparency = 1.000
+Console.Position = UDim2.new(0.5, -221, 0.5, -111)
+Console.Size = UDim2.new(0, 500, 0, 300)
+Console.Font = Enum.Font.SourceSans
+Console.Text = ""
+Console.TextColor3 = Color3.fromRGB(0, 0, 0)
+Console.TextSize = 14.000
+Console.TextTransparency = 1.000
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Console
+MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainFrame.BackgroundTransparency = 0.500
+MainFrame.BorderSizePixel = 0
+MainFrame.Size = UDim2.new(1, 0, 1, 0)
+
+OptionsTab.Name = "OptionsTab"
+OptionsTab.Parent = MainFrame
+OptionsTab.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
+OptionsTab.BackgroundTransparency = 1.000
+OptionsTab.BorderSizePixel = 0
+OptionsTab.ClipsDescendants = true
+OptionsTab.Position = UDim2.new(0, 96, 0, 26)
+OptionsTab.Size = UDim2.new(0.810000002, -27, 0, 25)
+
+Tab_Client.Name = "Tab_Client"
+Tab_Client.Parent = OptionsTab
+Tab_Client.BackgroundTransparency = 1.000
+Tab_Client.Position = UDim2.new(0, 5, 0, 0)
+Tab_Client.Size = UDim2.new(0, 67, 0, 28)
+Tab_Client.Text = "ClientLog"
+Tab_Client.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Tab_Clear.Name = "Tab_Clear"
+Tab_Clear.Parent = OptionsTab
+Tab_Clear.BackgroundTransparency = 1.000
+Tab_Clear.Position = UDim2.new(0, 306, 0, 0)
+Tab_Clear.Size = UDim2.new(0, 67, 0, 28)
+Tab_Clear.Text = "Clear Output"
+Tab_Clear.TextColor3 = Color3.fromRGB(255, 0, 0)
+
+TabFrame.Name = "TabFrame"
+TabFrame.Parent = MainFrame
+TabFrame.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
+TabFrame.BackgroundTransparency = 0.500
+TabFrame.BorderSizePixel = 0
+TabFrame.Position = UDim2.new(0, 99, 0, 52)
+TabFrame.Size = UDim2.new(0.800000012, -27, 1, -52)
+
+ClientLog.Name = "ClientLog"
+ClientLog.Parent = TabFrame
+ClientLog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ClientLog.BackgroundTransparency = 1.000
+ClientLog.BorderSizePixel = 0
+ClientLog.Size = UDim2.new(1, 0, 1, 0)
+ClientLog.CanvasSize = UDim2.new(0, 0, 1, 0)
+ClientLog.ScrollBarThickness = 1
+
+scroll.Name = "scroll"
+scroll.Parent = ClientLog
+scroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scroll.BackgroundTransparency = 1.000
+scroll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+scroll.BorderSizePixel = 0
+scroll.Size = UDim2.new(1, 0, 1, 0)
+scroll.ZIndex = 9
+scroll.BottomImage = "rbxassetid://185945953"
+scroll.CanvasSize = UDim2.new(0, 0, 0, 0)
+scroll.MidImage = "rbxassetid://185945953"
+scroll.ScrollBarThickness = 10
+scroll.TopImage = "rbxassetid://185945953"
+
+blankLine.Name = "blankLine"
+blankLine.Parent = ClientLog
+blankLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+blankLine.BackgroundTransparency = 1.000
+blankLine.BorderColor3 = Color3.fromRGB(0, 0, 0)
+blankLine.BorderSizePixel = 0
+blankLine.ZIndex = 10
+blankLine.Font = Enum.Font.SourceSans
+blankLine.Text = ""
+blankLine.TextColor3 = Color3.fromRGB(0, 0, 0)
+blankLine.TextSize = 18.000
+blankLine.TextXAlignment = Enum.TextXAlignment.Left
+
+SideFrame.Name = "SideFrame"
+SideFrame.Parent = MainFrame
+SideFrame.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
+SideFrame.BackgroundTransparency = 0.500
+SideFrame.BorderSizePixel = 0
+SideFrame.Position = UDim2.new(1, -25, 0, 27)
+SideFrame.Size = UDim2.new(0, 25, 1, -27)
+
+Exit.Name = "Exit"
+Exit.Parent = SideFrame
+Exit.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Exit.BackgroundTransparency = 0.500
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(1, -25, 0, -26)
+Exit.Size = UDim2.new(0, 24, 0, 24)
+Exit.AutoButtonColor = false
+Exit.Text = ""
+
+Image.Name = "Image"
+Image.Parent = Exit
+Image.BackgroundTransparency = 1.000
+Image.Position = UDim2.new(0.166999996, 0, 0, 5)
+Image.Size = UDim2.new(0.666666687, 0, 0.666666687, 0)
+Image.Image = "https://www.roblox.com/asset/?id=261878266"
+
+Drag.Name = "Drag"
+Drag.Parent = MainFrame
+Drag.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Drag.BackgroundTransparency = 0.500
+Drag.BorderSizePixel = 0
+Drag.Size = UDim2.new(1, -26, 0, 24)
+Drag.AutoButtonColor = false
+Drag.Modal = true
+Drag.Text = ""
+
+Title.Name = "Title"
+Title.Parent = Drag
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0, 5, 0, 0)
+Title.Size = UDim2.new(1, -5, 1, 0)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Funeral Parlor Console"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 18.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+ToggleOptionsTab.Name = "ToggleOptionsTab"
+ToggleOptionsTab.Parent = MainFrame
+ToggleOptionsTab.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
+ToggleOptionsTab.BackgroundTransparency = 0.500
+ToggleOptionsTab.BorderSizePixel = 0
+ToggleOptionsTab.ClipsDescendants = true
+ToggleOptionsTab.Position = UDim2.new(0, 1, 0, 24)
+ToggleOptionsTab.Size = UDim2.new(0.244000018, -27, 0.836666644, 25)
+
+Chats.Name = "Chats"
+Chats.Parent = ToggleOptionsTab
+Chats.BackgroundTransparency = 1.000
+Chats.Position = UDim2.new(0, 5, 0, 0)
+Chats.Size = UDim2.new(0, 90, 0, 28)
+Chats.Text = "Chats: Enabled"
+Chats.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Teams.Name = "Teams"
+Teams.Parent = ToggleOptionsTab
+Teams.BackgroundTransparency = 1.000
+Teams.Position = UDim2.new(0, 5, 0, 28)
+Teams.Size = UDim2.new(0, 90, 0, 28)
+Teams.Text = "Teams: Enabled"
+Teams.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Exploitings.Name = "Exploitings"
+Exploitings.Parent = ToggleOptionsTab
+Exploitings.BackgroundTransparency = 1.000
+Exploitings.Position = UDim2.new(0, 5, 0, 56)
+Exploitings.Size = UDim2.new(0, 90, 0, 28)
+Exploitings.Text = "Exploitings: Enabled"
+Exploitings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exploitings.TextSize = 6.000
+
+Equipments.Name = "Equipments"
+Equipments.Parent = ToggleOptionsTab
+Equipments.BackgroundTransparency = 1.000
+Equipments.Position = UDim2.new(0, 5, 0, 84)
+Equipments.Size = UDim2.new(0, 90, 0, 28)
+Equipments.Text = "Equipments: Enabled"
+Equipments.TextColor3 = Color3.fromRGB(255, 255, 255)
+Equipments.TextSize = 6.000
+
+Connections.Name = "Connections"
+Connections.Parent = ToggleOptionsTab
+Connections.BackgroundTransparency = 1.000
+Connections.Position = UDim2.new(0, 5, 0, 112)
+Connections.Size = UDim2.new(0, 90, 0, 28)
+Connections.Text = "Connections: Enabled"
+Connections.TextColor3 = Color3.fromRGB(255, 255, 255)
+Connections.TextSize = 6.000
+
+SelfLogs.Name = "SelfLogs"
+SelfLogs.Parent = ToggleOptionsTab
+SelfLogs.BackgroundTransparency = 1.000
+SelfLogs.Position = UDim2.new(0, 2, 0, 248)
+SelfLogs.Size = UDim2.new(0, 90, 0, 28)
+SelfLogs.Text = "SelfLogs: Disabled"
+SelfLogs.TextColor3 = Color3.fromRGB(255, 255, 255)
+SelfLogs.TextSize = 6.000
+
+-- Scripts:
+
+local function RRGA_fake_script() -- Console.Main_Handler 
+	local script = Instance.new('LocalScript', Console)
+
+	local Players=game:GetService("Players")
+	local WFC= function(Parent,Child)
+		return Parent:WaitForChild(Child)
+	end
+	local RunService = game:GetService("RunService");
+	local Player = Players.LocalPlayer
+	local Mouse = Player:GetMouse()
+	
+	local Gui = script.Parent.Parent
+	local DevButton = script.Parent
+	local OpenFrame = WFC(Gui, "Open")
+	local MainFrame = WFC(DevButton, "MainFrame")
+	local DragButton = WFC(MainFrame, "Drag")
+	local SideFrame = WFC(MainFrame, "SideFrame")
+	local ExitButton = WFC(SideFrame, "Exit")
+	local TabFrame = WFC(MainFrame, "TabFrame")
+	local OptionsTab = WFC(MainFrame, "OptionsTab")
+	local Tab_Clear = WFC(OptionsTab, "Tab_Clear")
+	local ClientLog = WFC(TabFrame, "ClientLog")
+	
+	local DragDown = false
+	
+	--
+	
+	local StartDrag = function()
+		local function Drag()
+			local X = MainFrame.Position.X.Offset
+			local Y = MainFrame.Position.Y.Offset
+			local DposX = Mouse.X-X
+			local DposY = Mouse.Y-Y
+			DragDown = true
+			while DragDown do
+				RunService.RenderStepped:wait()
+				local posX = Mouse.X
+				local posY = Mouse.Y
+				MainFrame.Position = UDim2.new(0,posX - DposX,0,posY - DposY)
+			end
+		end 
+		DragButton.MouseButton1Down:connect(function() Drag() end)
+		DragButton.MouseButton1Up:connect(function() DragDown = false end)
+	end
+	
+	local StartTabs = function()
+		Tab_Clear.MouseButton1Click:connect(function()
+			if ClientLog.Visible == true then
+				ClientLog.scroll:ClearAllChildren()
+				ClientLog.scroll.CanvasSize = UDim2.new()
+			end
+		end)
+	end
+	
+	local Start = function()
+		spawn(StartDrag)
+		spawn(StartTabs)
+		ExitButton.MouseButton1Up:connect(function() DevButton.Visible = false OpenFrame.Visible = true end)
+		OpenFrame.Activated:Connect(function() DevButton.Visible = true OpenFrame.Visible = false end)
+	end
+	
+	--
+	
+	Start()
+end
+coroutine.wrap(RRGA_fake_script)()
+local function WYRPDT_fake_script() -- ClientLog.outputUpdate 
+	local script = Instance.new('LocalScript', ClientLog)
+
+	--[[
+	damage logs
+	weapon spam logs/exploit detection
+	demesh/fe script
+	raycast detection
+	vehicle entry logs
+	vehicle spawn logs
+	vehicle teleport logs
+	vehicle speed logs/maybe not
+	gate openings/door openings
+	climbing logs maybe
+	swat users
+	location logs
+	--]]
+	
+	
+	local Colors = {
+		[Enum.MessageType.MessageOutput] = BrickColor.new("White").Color;
+		[Enum.MessageType.MessageInfo] = BrickColor.new("Bright blue").Color;
+		[Enum.MessageType.MessageWarning] = BrickColor.new("Bright yellow").Color;
+		[Enum.MessageType.MessageError]  = BrickColor.new("Bright red").Color;
+	}
+	
+	local CanvasX = 0
+	
+	local CreateLogOutput = function(Output, MessageType)
+		local NewLine = script.Parent.blankLine:Clone()
+		if MessageType == nil then
+			MessageType = Enum.MessageType.MessageOutput
+		end
+		NewLine.TextColor3 = Colors[MessageType]
+		NewLine.Position = UDim2.new(0, 5, 0, (#script.Parent.scroll:getChildren() * 15))
+		NewLine.Text = Output
+		NewLine.TextSize = 16
+		NewLine.Name = tick()
+		NewLine.Parent = script.Parent.scroll
+		NewLine.Size = UDim2.new(0, (#Output * 10), 0, 15)
+		CanvasX = (CanvasX > (#Output * 10) and CanvasX or (#Output * 10)) -- dont use newLine.TextBounds.X outside of a local script
+		script.Parent.scroll.CanvasSize = UDim2.new(0, (CanvasX + 10), 0, ((#script.Parent.scroll:getChildren() + 1) * 15))
+	end
+	
+	-- game:getService("LogService").MessageOut:Connect(function(Output, MessageType)
+	--  CreateLogOutput(Output, MessageType)
+	-- end)
+	
+	-- Roblox Console
+	-- local x = game:GetService("LogService"):GetLogHistory()
+	-- local z={}
+	-- for _,v in pairs(x) do
+	--  local y={}
+	--  for i,k in pairs(v) do
+	--      if type(k)==("string") or type(k)==("Enum") then
+	--          table.insert(y,k)
+	--      end
+	--  end
+	--  table.insert(z,y)
+	-- end
+	
+	-- CreateLogOutput("Client Loaded",Enum.MessageType.MessageInfo)
+	-- CreateLogOutput("Developer Console made by ImFrostic",Enum.MessageType.MessageInfo)
+	
+	-- Roblox Console
+	-- for _,k in pairs(z) do
+	--  CreateLogOutput(k[1])
+	-- end
+	
+	local ToggleOptionsTab = script.Parent.Parent.Parent.ToggleOptionsTab
+	local ChatToggle = ToggleOptionsTab.Chats
+	local TeamToggle = ToggleOptionsTab.Teams
+	local ConnectionToggle = ToggleOptionsTab.Connections
+	local EquipmentToggle = ToggleOptionsTab.Equipments
+	local ExploitingToggle = ToggleOptionsTab.Exploitings
+	local SelfLogToggle = ToggleOptionsTab.SelfLogs
+	
+	-- Joins/Leaves
+	game.Players.PlayerAdded:Connect(function(Player)
+		if ConnectionToggle.Text == "Connections: Enabled" then
+			CreateLogOutput(Player.Name.." - Joined",Enum.MessageType.MessageWarning)
+		end
+	end)
+	game.Players.PlayerRemoving:Connect(function(Player)
+		if ConnectionToggle.Text == "Connections: Enabled" then
+			CreateLogOutput(Player.Name.." - Left",Enum.MessageType.MessageWarning)
+		end
+	end)
+	
+	-- Chatter
+	game.Players.PlayerAdded:Connect(function(Player)
+		Player.Chatted:Connect(function(Message)
+			if SelfLogToggle.Text == "SelfLogs: Enabled" then
+				if ChatToggle.Text == "Chats: Enabled" then
+					CreateLogOutput("["..Player.Name.."]: "..Message,Enum.MessageType.MessageOutput)
+				end
+			else
+				if Player.Name ~= game.Players.LocalPlayer.Name then
+					if ChatToggle.Text == "Chats: Enabled" then
+						CreateLogOutput("["..Player.Name.."]: "..Message,Enum.MessageType.MessageOutput)
+					end
+				end
+			end
+		end)
+	end)
+	for _,Player in pairs(game:GetService("Players"):GetPlayers()) do
+		Player.Chatted:Connect(function(Message)
+			if SelfLogToggle.Text == "SelfLogs: Enabled" then
+				if ChatToggle.Text == "Chats: Enabled" then
+					CreateLogOutput("["..Player.Name.."]: "..Message,Enum.MessageType.MessageOutput)
+				end
+			else
+				if Player.Name ~= game.Players.LocalPlayer.Name then
+					if ChatToggle.Text == "Chats: Enabled" then
+						CreateLogOutput("["..Player.Name.."]: "..Message,Enum.MessageType.MessageOutput)
+					end
+				end
+			end
+		end)
+	end
+	
+	-- Weapon Found / Exploit Detection
+	for _,Player in pairs(game:GetService("Players"):GetPlayers()) do
+		local Tool = {}
+		if Player.Character and Player.Character:WaitForChild("Humanoid",math.huge) then
+			Player.Character.ChildRemoved:Connect(function(Child)
+				if Child:IsA("Tool") then
+					Tool = Child
+				end
+			end)
+			Player.Backpack.ChildAdded:Connect(function(Child)
+				if SelfLogToggle.Text == "SelfLogs: Enabled" then
+					if EquipmentToggle.Text == "Equipments: Enabled" then
+						wait(0.3)
+						if Child ~= Tool and Child.Name ~= "Taser" and Child.Name ~= "Handcuffs" then
+							CreateLogOutput(Player.Name.." Found A: "..Child.Name,Enum.MessageType.MessageWarning)
+						end
+					end
+				else
+					if Player.Name ~= game.Players.LocalPlayer.Name then
+						if EquipmentToggle.Text == "Equipments: Enabled" then
+							wait(0.3)
+							if Child ~= Tool and Child.Name ~= "Taser" and Child.Name ~= "Handcuffs" then
+								CreateLogOutput(Player.Name.." Found A: "..Child.Name,Enum.MessageType.MessageWarning)
+							end
+						end
+					end
+				end
+			end)
+		end
+	end
+	game.Players.PlayerAdded:Connect(function(Player)
+		local Tool = {}
+		if Player.Character and Player.Character:WaitForChild("Humanoid",math.huge) then
+			Player.Character.ChildRemoved:Connect(function(Child)
+				if Child:IsA("Tool") then
+					Tool = Child
+				end
+			end)
+			Player.Backpack.ChildAdded:Connect(function(Child)
+				if SelfLogToggle.Text == "SelfLogs: Enabled" then
+					if EquipmentToggle.Text == "Equipments: Enabled" then
+						wait(0.3)
+						if Child ~= Tool and Child.Name ~= "Taser" and Child.Name ~= "Handcuffs" then
+							CreateLogOutput(Player.Name.." Found A: "..Child.Name,Enum.MessageType.MessageWarning)
+						end
+					end
+				else
+					if Player.Name ~= game.Players.LocalPlayer.Name then
+						if EquipmentToggle.Text == "Equipments: Enabled" then
+							wait(0.3)
+							if Child ~= Tool and Child.Name ~= "Taser" and Child.Name ~= "Handcuffs" then
+								CreateLogOutput(Player.Name.." Found A: "..Child.Name,Enum.MessageType.MessageWarning)
+							end
+						end
+					end
+				end
+			end)
+		end
+	end)
+	
+	-- Team Change
+	for _,Player in pairs(game:GetService("Players"):GetPlayers()) do
+		Player:GetPropertyChangedSignal("Team"):Connect(function()
+			if SelfLogToggle.Text == "SelfLogs: Enabled" then
+				if TeamToggle.Text == "Teams: Enabled" then
+					wait(0.3)
+					if Player.Team ~= nil then
+						local CurrentTeam = Player.Team
+						CreateLogOutput(Player.Name.." Changed Teams To: "..CurrentTeam.Name,Enum.MessageType.MessageWarning)
+					end
+				end
+			else
+				if Player.Name ~= game.Players.LocalPlayer.Name then
+					if TeamToggle.Text == "Teams: Enabled" then
+						wait(0.3)
+						if Player.Team ~= nil then
+							local CurrentTeam = Player.Team
+							CreateLogOutput(Player.Name.." Changed Teams To: "..CurrentTeam.Name,Enum.MessageType.MessageWarning)
+						end
+					end
+				end
+			end
+		end)
+	end
+	game.Players.PlayerAdded:Connect(function(Player)
+		Player:GetPropertyChangedSignal("Team"):Connect(function()
+			if SelfLogToggle.Text == "SelfLogs: Enabled" then
+				if TeamToggle.Text == "Teams: Enabled" then
+					wait(0.3)
+					if Player.Team ~= nil then
+						local CurrentTeam = Player.Team
+						CreateLogOutput(Player.Name.." Changed Teams To: "..CurrentTeam.Name,Enum.MessageType.MessageWarning)
+					end
+				end
+			else
+				if Player.Name ~= game.Players.LocalPlayer.Name then
+					if TeamToggle.Text == "Teams: Enabled" then
+						wait(0.3)
+						if Player.Team ~= nil then
+							local CurrentTeam = Player.Team
+							CreateLogOutput(Player.Name.." Changed Teams To: "..CurrentTeam.Name,Enum.MessageType.MessageWarning)
+						end
+					end
+				end
+			end
+		end)
+	end)
+	
+	-- Custom Team Detection
+	game.Players.PlayerAdded:Connect(function(Player)
+		Player:GetPropertyChangedSignal("Team"):Connect(function()
+			if SelfLogToggle.Text == "SelfLogs: Enabled" then
+				if TeamToggle.Text == "Teams: Enabled" then
+					wait(0.3)
+					if Player.Team == nil then
+						local CurrentTeam = Player.Team
+						CreateLogOutput(Player.Name.." - Changed Team To: Custom",Enum.MessageType.MessageError)
+					end
+				end
+			else
+				if Player.Name ~= game.Players.LocalPlayer.Name then
+					if TeamToggle.Text == "Teams: Enabled" then
+						wait(0.3)
+						if Player.Team == nil then
+							local CurrentTeam = Player.Team
+							CreateLogOutput(Player.Name.." - Changed Team To: Custom",Enum.MessageType.MessageError)
+						end
+					end
+				end
+			end
+		end)
+	end)
+	for _,Player in pairs(game:GetService("Players"):GetPlayers()) do
+		Player:GetPropertyChangedSignal("Team"):Connect(function()
+			if SelfLogToggle.Text == "SelfLogs: Enabled" then
+				if TeamToggle.Text == "Teams: Enabled" then
+					wait(0.3)
+					if Player.Team == nil then
+						local CurrentTeam = Player.Team
+						CreateLogOutput(Player.Name.." - Changed Team To: Custom",Enum.MessageType.MessageError)
+					end
+				end
+			else
+				if Player.Name ~= game.Players.LocalPlayer.Name then
+					if TeamToggle.Text == "Teams: Enabled" then
+						wait(0.3)
+						if Player.Team == nil then
+							local CurrentTeam = Player.Team
+							CreateLogOutput(Player.Name.." - Changed Team To: Custom",Enum.MessageType.MessageError)
+						end
+					end
+				end
+			end
+		end)
+	end
+	
+	-- Quick Respawn Detection
+	game.Players.PlayerAdded:Connect(function(Player)
+		Player.CharacterAdded:Connect(function(Character)
+			if SelfLogToggle.Text == "SelfLogs: Enabled" then
+				if ExploitingToggle.Text == "Exploitings: Enabled" then
+					wait(0.50)
+					if not Character:FindFirstChildOfClass("ForceField") then
+						CreateLogOutput(Player.Name.." - Quick Respawned",Enum.MessageType.MessageError)
+					end
+				end
+			else
+				if Player.Name ~= game.Players.LocalPlayer.Name then
+					if ExploitingToggle.Text == "Exploitings: Enabled" then
+						wait(0.50)
+						if not Character:FindFirstChildOfClass("ForceField") then
+							CreateLogOutput(Player.Name.." - Quick Respawned",Enum.MessageType.MessageError)
+						end
+					end
+				end
+			end
+		end)
+	end)
+	for _,Player in pairs(game:GetService("Players"):GetPlayers()) do
+		Player.CharacterAdded:Connect(function(Character)
+			if SelfLogToggle.Text == "SelfLogs: Enabled" then
+				if ExploitingToggle.Text == "Exploitings: Enabled" then
+					wait(0.50)
+					if not Character:FindFirstChildOfClass("ForceField") then
+						CreateLogOutput(Player.Name.." - Quick Respawned",Enum.MessageType.MessageError)
+					end
+				end
+			else
+				if Player.Name ~= game.Players.LocalPlayer.Name then
+					if ExploitingToggle.Text == "Exploitings: Enabled" then
+						wait(0.50)
+						if not Character:FindFirstChildOfClass("ForceField") then
+							CreateLogOutput(Player.Name.." - Quick Respawned",Enum.MessageType.MessageError)
+						end
+					end
+				end
+			end
+		end)
+	end
+	
+	local ExploitList = {}
+	function OnList(Player)
+		for i,v in pairs(ExploitList) do
+			if v.Player == Player then
+				return true, v
+			end
+		end
+		return false
+	end
+	game:GetService("RunService").Heartbeat:Connect(function()
+		if ExploitingToggle.Text == "Exploitings: Enabled" then
+			for _,Player in pairs(game:GetService("Players"):GetPlayers()) do
+				local Died = false
+				if Player.Character and Player.Character:FindFirstChild("Torso") and Player.Character:FindFirstChild("Humanoid") and Player.Character:FindFirstChild("Humanoid").Health == 0 then
+					Died = true
+				end
+				local TeamChanged = false
+				Player:GetPropertyChangedSignal("Team"):Connect(function()
+					TeamChanged = true
+				end)
+				wait(1)
+				if SelfLogToggle.Text == "SelfLogs: Enabled" then
+					if Player.Character and Player.Character:FindFirstChild("Torso") and Player.Character:FindFirstChild("Humanoid") and Player.Character:FindFirstChild("Humanoid").Sit == false then 
+						local LastPos = Player.Character:WaitForChild("Torso",math.huge).Position
+						wait(1)
+						if Died == false and TeamChanged == false then
+							if (Player.Character:WaitForChild("Torso",math.huge).Position - LastPos).magnitude > 30 then
+								if not OnList(Player) then
+									table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+									CreateLogOutput(Player.Name.." - Teleported",Enum.MessageType.MessageError)
+								end
+							end
+						end
+					end
+				else
+					if Player.Name ~= game.Players.LocalPlayer.Name then
+						if Player.Character and Player.Character:FindFirstChild("Torso") and Player.Character:FindFirstChild("Humanoid") and Player.Character:FindFirstChild("Humanoid").Sit == false then 
+							local LastPos = Player.Character:WaitForChild("Torso",math.huge).Position
+							wait(0.5)
+							if Died == false and TeamChanged == false then
+								if (Player.Character:WaitForChild("Torso",math.huge).Position - LastPos).magnitude > 30 then
+									if not OnList(Player) then
+										table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+										CreateLogOutput(Player.Name.." - Teleported",Enum.MessageType.MessageError)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+	
+	coroutine.resume(coroutine.create(function()
+		while true do
+			if ExploitingToggle.Text == "Exploitings: Enabled" then
+				-- Movement Detection
+				for _,Player in pairs(game:GetService("Players"):GetPlayers()) do
+					if SelfLogToggle.Text == "SelfLogs: Enabled" then
+						if Player.Character and Player.Character:FindFirstChild("Torso") and Player.Character:FindFirstChild("Humanoid") and Player.Character:FindFirstChild("Humanoid").Sit == false then 
+							if Vector3.new(Player.Character.Torso.RotVelocity.X,Player.Character.Torso.RotVelocity.Y,Player.Character.Torso.RotVelocity.Z).magnitude > 150 then
+								if not OnList(Player) then
+									table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+									CreateLogOutput(Player.Name.." - Flinging",Enum.MessageType.MessageError)
+								end
+							end
+							if Vector3.new(Player.Character.Torso.Velocity.X,0,0).magnitude > 85 then
+								if not OnList(Player) then
+									table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+									CreateLogOutput(Player.Name.." - Flying/JumpPower Changed",Enum.MessageType.MessageError)
+								end
+							end
+							if Vector3.new(0,0,Player.Character.Torso.Velocity.Z).magnitude > 75 then
+								if not OnList(Player) then
+									table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+									CreateLogOutput(Player.Name.." - WalkSpeed Changed",Enum.MessageType.MessageError)
+								end
+							end
+							local CFrame = Player.Character:FindFirstChild("Torso").CFrame
+							-- local Position = Player.Character:FindFirstChild("Torso").Position
+							if CFrame.Y > 1000000 --[[Position.Y > 3.14158e+06]] or CFrame.Y <= -1000000 --[[Position.Y > -3.14158e+06]] then
+								if not OnList(Player) then
+									table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+									CreateLogOutput(Player.Name.." - Has Gone Invisible",Enum.MessageType.MessageError)
+								end
+							end
+						end
+					else
+						if Player.Name ~= game.Players.LocalPlayer.Name then
+							if Player.Character and Player.Character:FindFirstChild("Torso") and Player.Character:FindFirstChild("Humanoid") and Player.Character:FindFirstChild("Humanoid").Sit == false then 
+								if Vector3.new(Player.Character.Torso.RotVelocity.X,Player.Character.Torso.RotVelocity.Y,Player.Character.Torso.RotVelocity.Z).magnitude > 150 then
+									if not OnList(Player) then
+										table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+										CreateLogOutput(Player.Name.." - Flinging",Enum.MessageType.MessageError)
+									end
+								end
+								if Vector3.new(Player.Character.Torso.Velocity.X,0,0).magnitude > 85 then
+									if not OnList(Player) then
+										table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+										CreateLogOutput(Player.Name.." - Flying/JumpPower Changed",Enum.MessageType.MessageError)
+									end
+								end
+								if Vector3.new(0,0,Player.Character.Torso.Velocity.Z).magnitude > 85 then
+									if not OnList(Player) then
+										table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+										CreateLogOutput(Player.Name.." - WalkSpeed Changed",Enum.MessageType.MessageError)
+									end
+								end
+								local CFrame = Player.Character:FindFirstChild("Torso").CFrame
+								-- local Position = Player.Character:FindFirstChild("Torso").Position
+								if CFrame.Y > 1000000 --[[Position.Y > 3.14158e+06]] or CFrame.Y <= -1000000 --[[Position.Y > -3.14158e+06]] then
+									if not OnList(Player) then
+										table.insert(ExploitList, #ExploitList + 1, {["Player"] = Player})
+										CreateLogOutput(Player.Name.." - Has Gone Invisible",Enum.MessageType.MessageError)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+			wait()
+		end
+	end))
+end
+coroutine.wrap(WYRPDT_fake_script)()
+local function XGUKU_fake_script() -- Chats.LocalScript 
+	local script = Instance.new('LocalScript', Chats)
+
+	local button = script.Parent
+	
+	local Toggle = false
+	
+	button.MouseButton1Down:Connect(function()
+		if not Toggle then
+			Toggle = true
+			button.Text = "Chats: Disabled"
+		else    
+			Toggle = false
+			button.Text = "Chats: Enabled"
+		end
+	end)
+end
+coroutine.wrap(XGUKU_fake_script)()
+local function CBLOCZI_fake_script() -- Teams.LocalScript 
+	local script = Instance.new('LocalScript', Teams)
+
+	local button = script.Parent
+	
+	local Toggle = false
+	
+	button.MouseButton1Down:Connect(function()
+		if not Toggle then
+			Toggle = true
+			button.Text = "Teams: Disabled"
+		else    
+			Toggle = false
+			button.Text = "Teams: Enabled"
+		end
+	end)
+end
+coroutine.wrap(CBLOCZI_fake_script)()
+local function XUHFN_fake_script() -- Exploitings.LocalScript 
+	local script = Instance.new('LocalScript', Exploitings)
+
+	local button = script.Parent
+	
+	local Toggle = false
+	
+	button.MouseButton1Down:Connect(function()
+		if not Toggle then
+			Toggle = true
+			button.Text = "Exploitings: Disabled"
+		else    
+			Toggle = false
+			button.Text = "Exploitings: Enabled"
+		end
+	end)
+end
+coroutine.wrap(XUHFN_fake_script)()
+local function SQIL_fake_script() -- Equipments.LocalScript 
+	local script = Instance.new('LocalScript', Equipments)
+
+	local button = script.Parent
+	
+	local Toggle = false
+	
+	button.MouseButton1Down:Connect(function()
+		if not Toggle then
+			Toggle = true
+			button.Text = "Equipments: Disabled"
+		else    
+			Toggle = false
+			button.Text = "Equipments: Enabled"
+		end
+	end)
+end
+coroutine.wrap(SQIL_fake_script)()
+local function BAXD_fake_script() -- Connections.LocalScript 
+	local script = Instance.new('LocalScript', Connections)
+
+	local button = script.Parent
+	
+	local Toggle = false
+	
+	button.MouseButton1Down:Connect(function()
+		if not Toggle then
+			Toggle = true
+			button.Text = "Connections: Disabled"
+		else    
+			Toggle = false
+			button.Text = "Connections: Enabled"
+		end
+	end)
+end
+coroutine.wrap(BAXD_fake_script)()
+local function HLHIUQ_fake_script() -- SelfLogs.LocalScript 
+	local script = Instance.new('LocalScript', SelfLogs)
+
+	local button = script.Parent
+	
+	local Toggle = false
+	
+	button.MouseButton1Down:Connect(function()
+		if not Toggle then
+			Toggle = true
+			button.Text = "SelfLogs: Enabled"
+		else    
+			Toggle = false
+			button.Text = "SelfLogs: Disabled"
+		end
+	end)
+end
+coroutine.wrap(HLHIUQ_fake_script)()
