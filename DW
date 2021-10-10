@@ -1,0 +1,62 @@
+local UserInputService = game:GetService("UserInputService")
+local StarterGuiService = game:GetService("StarterGui")
+
+local LinesDrawn = {}
+
+local canDraw, isDrawing = false, false
+local mousePos = UserInputService:GetMouseLocation()
+
+UserInputService.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		if canDraw then
+			isDrawing = true
+		end
+
+	elseif input.UserInputType == Enum.UserInputType.MouseButton2 then
+		if canDraw then
+			for _, line in pairs(LinesDrawn) do
+				line:Remove()
+			end
+
+			table.clear(LinesDrawn)
+
+			StarterGuiService:SetCore("SendNotification", {Title = "Paint", Text = "Cleared Canvas", Icon = "rbxassetid://126963766"})
+		end
+
+	elseif input.UserInputType == Enum.UserInputType.MouseButton3 then
+		if canDraw then
+			canDraw = false
+			StarterGuiService:SetCore("SendNotification", {Title = "Paint", Text = "Disabled Drawing", Icon = "rbxassetid://126963766"})
+		else
+			canDraw = true
+			StarterGuiService:SetCore("SendNotification", {Title = "Paint", Text = "Enabled Drawing", Icon = "rbxassetid://126963766"})
+		end
+	end
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		isDrawing = false
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement then
+		if isDrawing then
+			local line = Drawing.new("Line")
+
+			line.Visible = true
+			line.Transparency = 1
+			line.Color = Color3.new(1, 1, 1)
+			line.Thickness = 1
+			line.From = mousePos
+			line.To = UserInputService:GetMouseLocation()
+
+			table.insert(LinesDrawn, line)
+
+			mousePos = UserInputService:GetMouseLocation()
+		else
+			mousePos = UserInputService:GetMouseLocation()
+		end
+	end
+end)
