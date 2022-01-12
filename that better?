@@ -79,21 +79,6 @@ local CyberHammer = Instance.new("TextButton")
 local ElioBlasio = Instance.new("TextButton")
 local NeptunianV = Instance.new("TextButton")
 local Snipernull = Instance.new("TextButton")
---// Variables
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local Prefix = _G.Prefix
-
-
---// Functions
-local function lwr(msg, msg2)
-    if string.lower(msg) == Prefix..msg2 then 
-        return true
-    end
-end
-local function Fire(msg)
-    require(LocalPlayer.PlayerScripts.ChatScript.ChatMain).MessagePosted:fire(msg)
-end
 
 FEHatGiver.Name = "FE Hat Giver"
 FEHatGiver.Parent = game.CoreGui
