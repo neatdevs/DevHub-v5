@@ -1,0 +1,1299 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local StartingFrame = Instance.new("Frame")
+local GradientST = Instance.new("Frame")
+local UIGradientST = Instance.new("UIGradient")
+local UICornerST = Instance.new("UICorner")
+local MainST = Instance.new("TextButton")
+local Shadow = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local LocalPlayerST = Instance.new("TextButton")
+local Shadow_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local FeST = Instance.new("TextButton")
+local Shadow_3 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local SettingsST = Instance.new("TextButton")
+local Shadow_4 = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local Infomation = Instance.new("TextBox")
+local MainFrame = Instance.new("Frame")
+local GradientM = Instance.new("Frame")
+local UIGradientM = Instance.new("UIGradient")
+local UICornerM = Instance.new("UICorner")
+local MainM = Instance.new("TextButton")
+local Shadow_5 = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local LocalPlayerM = Instance.new("TextButton")
+local Shadow_6 = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local FeM = Instance.new("TextButton")
+local Shadow_7 = Instance.new("Frame")
+local TextLabel_7 = Instance.new("TextLabel")
+local SettingsM = Instance.new("TextButton")
+local Shadow_8 = Instance.new("Frame")
+local TextLabel_8 = Instance.new("TextLabel")
+local Main = Instance.new("TextLabel")
+local LocalPlayerFrame = Instance.new("Frame")
+local GradientLP = Instance.new("Frame")
+local UIGradientLP = Instance.new("UIGradient")
+local UICornerLP = Instance.new("UICorner")
+local MainLP = Instance.new("TextButton")
+local Shadow_9 = Instance.new("Frame")
+local TextLabel_9 = Instance.new("TextLabel")
+local LocalPlayerLP = Instance.new("TextButton")
+local Shadow_10 = Instance.new("Frame")
+local TextLabel_10 = Instance.new("TextLabel")
+local FeLP = Instance.new("TextButton")
+local Shadow_11 = Instance.new("Frame")
+local TextLabel_11 = Instance.new("TextLabel")
+local LP = Instance.new("TextButton")
+local Shadow_12 = Instance.new("Frame")
+local TextLabel_12 = Instance.new("TextLabel")
+local LocalPlayer = Instance.new("TextLabel")
+local FEFrame = Instance.new("Frame")
+local GradientFE = Instance.new("Frame")
+local UIGradientFE = Instance.new("UIGradient")
+local UICornerFE = Instance.new("UICorner")
+local MainFE = Instance.new("TextButton")
+local Shadow_13 = Instance.new("Frame")
+local TextLabel_13 = Instance.new("TextLabel")
+local LocalPlayerFE = Instance.new("TextButton")
+local Shadow_14 = Instance.new("Frame")
+local TextLabel_14 = Instance.new("TextLabel")
+local FeFE = Instance.new("TextButton")
+local Shadow_15 = Instance.new("Frame")
+local TextLabel_15 = Instance.new("TextLabel")
+local SettingsFE = Instance.new("TextButton")
+local Shadow_16 = Instance.new("Frame")
+local TextLabel_16 = Instance.new("TextLabel")
+local FE = Instance.new("TextLabel")
+local SettingsFrame = Instance.new("Frame")
+local GradientS = Instance.new("Frame")
+local UIGradientS = Instance.new("UIGradient")
+local UICornerS = Instance.new("UICorner")
+local MainS = Instance.new("TextButton")
+local Shadow_17 = Instance.new("Frame")
+local TextLabel_17 = Instance.new("TextLabel")
+local LocalPlayerS = Instance.new("TextButton")
+local Shadow_18 = Instance.new("Frame")
+local TextLabel_18 = Instance.new("TextLabel")
+local FeS = Instance.new("TextButton")
+local Shadow_19 = Instance.new("Frame")
+local TextLabel_19 = Instance.new("TextLabel")
+local SettingsS = Instance.new("TextButton")
+local Shadow_20 = Instance.new("Frame")
+local TextLabel_20 = Instance.new("TextLabel")
+local Settings = Instance.new("TextLabel")
+local WhitelistFrame = Instance.new("ImageLabel")
+local UIGradient = Instance.new("UIGradient")
+local WLTitle = Instance.new("TextLabel")
+local WhitelistBox = Instance.new("TextBox")
+local WhitelistBox_Roundify_12px = Instance.new("ImageLabel")
+local EnterButton = Instance.new("TextButton")
+local EnterButton_Roundify_12px = Instance.new("ImageLabel")
+	
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+-- Variables
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "r" -- has to be lowercase
+bind2 = "t"
+
+StartingFrame.Name = "Starting Frame"
+StartingFrame.Parent = ScreenGui
+StartingFrame.Active = true
+StartingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StartingFrame.BackgroundTransparency = 1.000
+StartingFrame.Position = UDim2.new(0.0557801127, 0, 0.0981387496, 0)
+StartingFrame.Size = UDim2.new(0, 406, 0, 474)
+StartingFrame.Visible = false
+StartingFrame.Draggable = true
+
+GradientST.Name = "GradientST"
+GradientST.Parent = StartingFrame
+GradientST.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GradientST.BorderColor3 = Color3.fromRGB(27, 42, 53)
+GradientST.BorderSizePixel = 0
+GradientST.Position = UDim2.new(-0.00176678738, 0, 0, 0)
+GradientST.Size = UDim2.new(0, 406, 0, 474)
+
+UIGradientST.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradientST.Name = "UIGradientST"
+UIGradientST.Parent = GradientST
+
+UICornerST.CornerRadius = UDim.new(0, 4)
+UICornerST.Name = "UICornerST"
+UICornerST.Parent = GradientST
+
+MainST.Name = "MainST"
+MainST.Parent = GradientST
+MainST.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainST.BorderSizePixel = 0
+MainST.Position = UDim2.new(0.0229681972, 0, 0.0126582282, 0)
+MainST.Size = UDim2.new(0, 77, 0, 28)
+MainST.ZIndex = 2
+MainST.Font = Enum.Font.GothamSemibold
+MainST.Text = ""
+MainST.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainST.TextScaled = true
+MainST.TextSize = 14.000
+MainST.TextWrapped = true
+MainST.MouseButton1Click:connect(function()
+	MainFrame.Visible = true
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow.Name = "Shadow"
+Shadow.Parent = MainST
+Shadow.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow.BorderSizePixel = 0
+Shadow.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel.Parent = MainST
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel.Size = UDim2.new(1, -20, 1, -20)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "Main"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+LocalPlayerST.Name = "Local PlayerST"
+LocalPlayerST.Parent = GradientST
+LocalPlayerST.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LocalPlayerST.BorderSizePixel = 0
+LocalPlayerST.Position = UDim2.new(0.279125839, 0, 0.0126582282, 0)
+LocalPlayerST.Size = UDim2.new(0, 77, 0, 28)
+LocalPlayerST.ZIndex = 2
+LocalPlayerST.Font = Enum.Font.GothamSemibold
+LocalPlayerST.Text = ""
+LocalPlayerST.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerST.TextScaled = true
+LocalPlayerST.TextSize = 14.000
+LocalPlayerST.TextWrapped = true
+LocalPlayerST.MouseButton1Click:connect(function()
+	LocalPlayerFrame.Visible = true
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_2.Name = "Shadow"
+Shadow_2.Parent = LocalPlayerST
+Shadow_2.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_2.BorderSizePixel = 0
+Shadow_2.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_2.Parent = LocalPlayerST
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_2.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_2.ZIndex = 2
+TextLabel_2.Font = Enum.Font.GothamSemibold
+TextLabel_2.Text = "local player"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+FeST.Name = "FeST"
+FeST.Parent = GradientST
+FeST.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+FeST.BorderSizePixel = 0
+FeST.Position = UDim2.new(0.510652959, 0, 0.0168776363, 0)
+FeST.Size = UDim2.new(0, 77, 0, 28)
+FeST.ZIndex = 2
+FeST.Font = Enum.Font.GothamSemibold
+FeST.Text = ""
+FeST.TextColor3 = Color3.fromRGB(255, 255, 255)
+FeST.TextScaled = true
+FeST.TextSize = 14.000
+FeST.TextWrapped = true
+FeST.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = true
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_3.Name = "Shadow"
+Shadow_3.Parent = FeST
+Shadow_3.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_3.BorderSizePixel = 0
+Shadow_3.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_3.Parent = FeST
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_3.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_3.ZIndex = 2
+TextLabel_3.Font = Enum.Font.GothamSemibold
+TextLabel_3.Text = "FE"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+SettingsST.Name = "SettingsST"
+SettingsST.Parent = GradientST
+SettingsST.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+SettingsST.BorderSizePixel = 0
+SettingsST.Position = UDim2.new(0.766810596, 0, 0.0168776363, 0)
+SettingsST.Size = UDim2.new(0, 77, 0, 28)
+SettingsST.ZIndex = 2
+SettingsST.Font = Enum.Font.GothamSemibold
+SettingsST.Text = ""
+SettingsST.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsST.TextScaled = true
+SettingsST.TextSize = 14.000
+SettingsST.TextWrapped = true
+SettingsST.MouseButton1Click:Connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = true
+end)
+
+Shadow_4.Name = "Shadow"
+Shadow_4.Parent = SettingsST
+Shadow_4.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_4.BorderSizePixel = 0
+Shadow_4.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_4.Parent = SettingsST
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_4.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_4.ZIndex = 2
+TextLabel_4.Font = Enum.Font.GothamSemibold
+TextLabel_4.Text = "Settings"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+Infomation.Name = "Infomation"
+Infomation.Parent = GradientST
+Infomation.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Infomation.BackgroundTransparency = 1.000
+Infomation.BorderSizePixel = 0
+Infomation.Position = UDim2.new(0.0418719202, 0, 0.164556965, 0)
+Infomation.Size = UDim2.new(0, 200, 0, 288)
+Infomation.Font = Enum.Font.Merriweather
+Infomation.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+Infomation.PlaceholderText = "Welcome to Deem's mod menu                                                                         Want to skip the key system buy premium!                                                                                                                  Want to use FE scripts that doesn't require reanimation?  Use Deem                                                                                                                                                                                                                                                                                                                                    Press \"R\" to close and press \"T\" to open the menu"
+Infomation.Text = ""
+Infomation.TextColor3 = Color3.fromRGB(0, 0, 0)
+Infomation.TextSize = 14.000
+Infomation.TextWrapped = true
+Infomation.TextXAlignment = Enum.TextXAlignment.Left
+Infomation.TextYAlignment = Enum.TextYAlignment.Top
+
+MainFrame.Name = "Main Frame"
+MainFrame.Parent = ScreenGui
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.Position = UDim2.new(0.0560000017, 0, 0.0979999974, 0)
+MainFrame.Size = UDim2.new(0, 406, 0, 474)
+MainFrame.Visible = false
+MainFrame.Draggable = true
+
+GradientM.Name = "GradientM"
+GradientM.Parent = MainFrame
+GradientM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GradientM.BorderColor3 = Color3.fromRGB(27, 42, 53)
+GradientM.BorderSizePixel = 0
+GradientM.Size = UDim2.new(0, 406, 0, 474)
+
+UIGradientM.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradientM.Name = "UIGradientM"
+UIGradientM.Parent = GradientM
+
+UICornerM.CornerRadius = UDim.new(0, 4)
+UICornerM.Name = "UICornerM"
+UICornerM.Parent = GradientM
+
+MainM.Name = "MainM"
+MainM.Parent = GradientM
+MainM.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainM.BorderSizePixel = 0
+MainM.Position = UDim2.new(0.0229681972, 0, 0.0126582282, 0)
+MainM.Size = UDim2.new(0, 77, 0, 28)
+MainM.ZIndex = 2
+MainM.Font = Enum.Font.GothamSemibold
+MainM.Text = ""
+MainM.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainM.TextScaled = true
+MainM.TextSize = 14.000
+MainM.TextWrapped = true
+MainM.MouseButton1Click:Connect(function()
+	MainFrame.Visible = true
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_5.Name = "Shadow"
+Shadow_5.Parent = MainM
+Shadow_5.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_5.BorderSizePixel = 0
+Shadow_5.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_5.Parent = MainM
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_5.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_5.ZIndex = 2
+TextLabel_5.Font = Enum.Font.GothamSemibold
+TextLabel_5.Text = "Main"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+LocalPlayerM.Name = "Local PlayerM"
+LocalPlayerM.Parent = GradientM
+LocalPlayerM.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LocalPlayerM.BorderSizePixel = 0
+LocalPlayerM.Position = UDim2.new(0.279125839, 0, 0.0126582282, 0)
+LocalPlayerM.Size = UDim2.new(0, 77, 0, 28)
+LocalPlayerM.ZIndex = 2
+LocalPlayerM.Font = Enum.Font.GothamSemibold
+LocalPlayerM.Text = ""
+LocalPlayerM.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerM.TextScaled = true
+LocalPlayerM.TextSize = 14.000
+LocalPlayerM.TextWrapped = true
+LocalPlayerM.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = true
+	SettingsFrame.Visible = false
+end)
+
+Shadow_6.Name = "Shadow"
+Shadow_6.Parent = LocalPlayerM
+Shadow_6.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_6.BorderSizePixel = 0
+Shadow_6.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_6.Parent = LocalPlayerM
+TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_6.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_6.ZIndex = 2
+TextLabel_6.Font = Enum.Font.GothamSemibold
+TextLabel_6.Text = "local player"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+
+FeM.Name = "FeM"
+FeM.Parent = GradientM
+FeM.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+FeM.BorderSizePixel = 0
+FeM.Position = UDim2.new(0.510652959, 0, 0.0168776363, 0)
+FeM.Size = UDim2.new(0, 77, 0, 28)
+FeM.ZIndex = 2
+FeM.Font = Enum.Font.GothamSemibold
+FeM.Text = ""
+FeM.TextColor3 = Color3.fromRGB(255, 255, 255)
+FeM.TextScaled = true
+FeM.TextSize = 14.000
+FeM.TextWrapped = true
+FeM.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = true
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_7.Name = "Shadow"
+Shadow_7.Parent = FeM
+Shadow_7.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_7.BorderSizePixel = 0
+Shadow_7.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_7.Parent = FeM
+TextLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_7.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_7.ZIndex = 2
+TextLabel_7.Font = Enum.Font.GothamSemibold
+TextLabel_7.Text = "FE"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+SettingsM.Name = "SettingsM"
+SettingsM.Parent = GradientM
+SettingsM.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+SettingsM.BorderSizePixel = 0
+SettingsM.Position = UDim2.new(0.766810596, 0, 0.0168776363, 0)
+SettingsM.Size = UDim2.new(0, 77, 0, 28)
+SettingsM.ZIndex = 2
+SettingsM.Font = Enum.Font.GothamSemibold
+SettingsM.Text = ""
+SettingsM.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsM.TextScaled = true
+SettingsM.TextSize = 14.000
+SettingsM.TextWrapped = true
+SettingsM.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = true
+end)
+
+Shadow_8.Name = "Shadow"
+Shadow_8.Parent = SettingsM
+Shadow_8.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_8.BorderSizePixel = 0
+Shadow_8.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_8.Parent = SettingsM
+TextLabel_8.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_8.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_8.ZIndex = 2
+TextLabel_8.Font = Enum.Font.GothamSemibold
+TextLabel_8.Text = "Settings"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
+
+Main.Name = "Main"
+Main.Parent = GradientM
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0, 0, 0.084388189, 0)
+Main.Size = UDim2.new(0, 200, 0, 27)
+Main.Font = Enum.Font.Merriweather
+Main.Text = "Main                                          _________________"
+Main.TextColor3 = Color3.fromRGB(0, 0, 0)
+Main.TextScaled = true
+Main.TextSize = 14.000
+Main.TextWrapped = true
+
+LocalPlayerFrame.Name = "Local Player Frame"
+LocalPlayerFrame.Parent = ScreenGui
+LocalPlayerFrame.Active = true
+LocalPlayerFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerFrame.BackgroundTransparency = 1.000
+LocalPlayerFrame.Position = UDim2.new(0.0560000017, 0, 0.0979999974, 0)
+LocalPlayerFrame.Size = UDim2.new(0, 406, 0, 474)
+LocalPlayerFrame.Visible = false
+LocalPlayerFrame.Draggable = true
+
+GradientLP.Name = "GradientLP"
+GradientLP.Parent = LocalPlayerFrame
+GradientLP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GradientLP.BorderColor3 = Color3.fromRGB(27, 42, 53)
+GradientLP.BorderSizePixel = 0
+GradientLP.Size = UDim2.new(0, 406, 0, 474)
+
+UIGradientLP.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradientLP.Name = "UIGradientLP"
+UIGradientLP.Parent = GradientLP
+
+UICornerLP.CornerRadius = UDim.new(0, 4)
+UICornerLP.Name = "UICornerLP"
+UICornerLP.Parent = GradientLP
+
+MainLP.Name = "MainLP"
+MainLP.Parent = GradientLP
+MainLP.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainLP.BorderSizePixel = 0
+MainLP.Position = UDim2.new(0.0229681972, 0, 0.0126582282, 0)
+MainLP.Size = UDim2.new(0, 77, 0, 28)
+MainLP.ZIndex = 2
+MainLP.Font = Enum.Font.GothamSemibold
+MainLP.Text = ""
+MainLP.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainLP.TextScaled = true
+MainLP.TextSize = 14.000
+MainLP.TextWrapped = true
+MainLP.MouseButton1Click:connect(function()
+	MainFrame.Visible = true
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_9.Name = "Shadow"
+Shadow_9.Parent = MainLP
+Shadow_9.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_9.BorderSizePixel = 0
+Shadow_9.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_9.Parent = MainLP
+TextLabel_9.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_9.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_9.ZIndex = 2
+TextLabel_9.Font = Enum.Font.GothamSemibold
+TextLabel_9.Text = "Main"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextWrapped = true
+
+LocalPlayerLP.Name = "Local PlayerLP"
+LocalPlayerLP.Parent = GradientLP
+LocalPlayerLP.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LocalPlayerLP.BorderSizePixel = 0
+LocalPlayerLP.Position = UDim2.new(0.279125839, 0, 0.0126582282, 0)
+LocalPlayerLP.Size = UDim2.new(0, 77, 0, 28)
+LocalPlayerLP.ZIndex = 2
+LocalPlayerLP.Font = Enum.Font.GothamSemibold
+LocalPlayerLP.Text = ""
+LocalPlayerLP.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerLP.TextScaled = true
+LocalPlayerLP.TextSize = 14.000
+LocalPlayerLP.TextWrapped = true
+LocalPlayerLP.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = true
+	SettingsFrame.Visible = false
+end)
+
+Shadow_10.Name = "Shadow"
+Shadow_10.Parent = LocalPlayerLP
+Shadow_10.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_10.BorderSizePixel = 0
+Shadow_10.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_10.Parent = LocalPlayerLP
+TextLabel_10.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_10.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_10.ZIndex = 2
+TextLabel_10.Font = Enum.Font.GothamSemibold
+TextLabel_10.Text = "local player"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 14.000
+TextLabel_10.TextWrapped = true
+
+FeLP.Name = "FeLP"
+FeLP.Parent = GradientLP
+FeLP.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+FeLP.BorderSizePixel = 0
+FeLP.Position = UDim2.new(0.510652959, 0, 0.0168776363, 0)
+FeLP.Size = UDim2.new(0, 77, 0, 28)
+FeLP.ZIndex = 2
+FeLP.Font = Enum.Font.GothamSemibold
+FeLP.Text = ""
+FeLP.TextColor3 = Color3.fromRGB(255, 255, 255)
+FeLP.TextScaled = true
+FeLP.TextSize = 14.000
+FeLP.TextWrapped = true
+FeLP.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = true
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_11.Name = "Shadow"
+Shadow_11.Parent = FeLP
+Shadow_11.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_11.BorderSizePixel = 0
+Shadow_11.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_11.Parent = FeLP
+TextLabel_11.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_11.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_11.ZIndex = 2
+TextLabel_11.Font = Enum.Font.GothamSemibold
+TextLabel_11.Text = "FE"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 14.000
+TextLabel_11.TextWrapped = true
+
+LP.Name = "LP"
+LP.Parent = GradientLP
+LP.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LP.BorderSizePixel = 0
+LP.Position = UDim2.new(0.766810596, 0, 0.0168776363, 0)
+LP.Size = UDim2.new(0, 77, 0, 28)
+LP.ZIndex = 2
+LP.Font = Enum.Font.GothamSemibold
+LP.Text = ""
+LP.TextColor3 = Color3.fromRGB(255, 255, 255)
+LP.TextScaled = true
+LP.TextSize = 14.000
+LP.TextWrapped = true
+LP.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = true
+	SettingsFrame.Visible = false
+end)
+
+Shadow_12.Name = "Shadow"
+Shadow_12.Parent = LP
+Shadow_12.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_12.BorderSizePixel = 0
+Shadow_12.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_12.Parent = LP
+TextLabel_12.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_12.BorderSizePixel = 0
+TextLabel_12.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_12.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_12.ZIndex = 2
+TextLabel_12.Font = Enum.Font.GothamSemibold
+TextLabel_12.Text = "Settings"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 14.000
+TextLabel_12.TextWrapped = true
+
+LocalPlayer.Name = "Local Player"
+LocalPlayer.Parent = GradientLP
+LocalPlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayer.BackgroundTransparency = 1.000
+LocalPlayer.Position = UDim2.new(0, 0, 0.084388189, 0)
+LocalPlayer.Size = UDim2.new(0, 200, 0, 27)
+LocalPlayer.Font = Enum.Font.Merriweather
+LocalPlayer.Text = "Local Player                                          _________________"
+LocalPlayer.TextColor3 = Color3.fromRGB(0, 0, 0)
+LocalPlayer.TextScaled = true
+LocalPlayer.TextSize = 14.000
+LocalPlayer.TextWrapped = true
+
+FEFrame.Name = "FE Frame"
+FEFrame.Parent = ScreenGui
+FEFrame.Active = true
+FEFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FEFrame.BackgroundTransparency = 1.000
+FEFrame.Position = UDim2.new(0.0560000017, 0, 0.0979999974, 0)
+FEFrame.Size = UDim2.new(0, 406, 0, 474)
+FEFrame.Visible = false
+FEFrame.Draggable = true
+
+GradientFE.Name = "GradientFE"
+GradientFE.Parent = FEFrame
+GradientFE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GradientFE.BorderColor3 = Color3.fromRGB(27, 42, 53)
+GradientFE.BorderSizePixel = 0
+GradientFE.Size = UDim2.new(0, 406, 0, 474)
+
+UIGradientFE.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradientFE.Name = "UIGradientFE"
+UIGradientFE.Parent = GradientFE
+
+UICornerFE.CornerRadius = UDim.new(0, 4)
+UICornerFE.Name = "UICornerFE"
+UICornerFE.Parent = GradientFE
+
+MainFE.Name = "MainFE"
+MainFE.Parent = GradientFE
+MainFE.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainFE.BorderSizePixel = 0
+MainFE.Position = UDim2.new(0.0229681972, 0, 0.0126582282, 0)
+MainFE.Size = UDim2.new(0, 77, 0, 28)
+MainFE.ZIndex = 2
+MainFE.Font = Enum.Font.GothamSemibold
+MainFE.Text = ""
+MainFE.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainFE.TextScaled = true
+MainFE.TextSize = 14.000
+MainFE.TextWrapped = true
+MainFE.MouseButton1Click:connect(function()
+	MainFrame.Visible = true
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_13.Name = "Shadow"
+Shadow_13.Parent = MainFE
+Shadow_13.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_13.BorderSizePixel = 0
+Shadow_13.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_13.Parent = MainFE
+TextLabel_13.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_13.BorderSizePixel = 0
+TextLabel_13.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_13.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_13.ZIndex = 2
+TextLabel_13.Font = Enum.Font.GothamSemibold
+TextLabel_13.Text = "Main"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 14.000
+TextLabel_13.TextWrapped = true
+
+LocalPlayerFE.Name = "Local PlayerFE"
+LocalPlayerFE.Parent = GradientFE
+LocalPlayerFE.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LocalPlayerFE.BorderSizePixel = 0
+LocalPlayerFE.Position = UDim2.new(0.279125839, 0, 0.0126582282, 0)
+LocalPlayerFE.Size = UDim2.new(0, 77, 0, 28)
+LocalPlayerFE.ZIndex = 2
+LocalPlayerFE.Font = Enum.Font.GothamSemibold
+LocalPlayerFE.Text = ""
+LocalPlayerFE.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerFE.TextScaled = true
+LocalPlayerFE.TextSize = 14.000
+LocalPlayerFE.TextWrapped = true
+LocalPlayerFE.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = true
+	SettingsFrame.Visible = false
+end)
+
+Shadow_14.Name = "Shadow"
+Shadow_14.Parent = LocalPlayerFE
+Shadow_14.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_14.BorderSizePixel = 0
+Shadow_14.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_14.Parent = LocalPlayerFE
+TextLabel_14.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_14.BorderSizePixel = 0
+TextLabel_14.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_14.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_14.ZIndex = 2
+TextLabel_14.Font = Enum.Font.GothamSemibold
+TextLabel_14.Text = "local player"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextScaled = true
+TextLabel_14.TextSize = 14.000
+TextLabel_14.TextWrapped = true
+
+FeFE.Name = "FeFE"
+FeFE.Parent = GradientFE
+FeFE.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+FeFE.BorderSizePixel = 0
+FeFE.Position = UDim2.new(0.510652959, 0, 0.0168776363, 0)
+FeFE.Size = UDim2.new(0, 77, 0, 28)
+FeFE.ZIndex = 2
+FeFE.Font = Enum.Font.GothamSemibold
+FeFE.Text = ""
+FeFE.TextColor3 = Color3.fromRGB(255, 255, 255)
+FeFE.TextScaled = true
+FeFE.TextSize = 14.000
+FeFE.TextWrapped = true
+FeFE.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = true
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_15.Name = "Shadow"
+Shadow_15.Parent = FeFE
+Shadow_15.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_15.BorderSizePixel = 0
+Shadow_15.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_15.Parent = FeFE
+TextLabel_15.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_15.BorderSizePixel = 0
+TextLabel_15.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_15.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_15.ZIndex = 2
+TextLabel_15.Font = Enum.Font.GothamSemibold
+TextLabel_15.Text = "FE"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextScaled = true
+TextLabel_15.TextSize = 14.000
+TextLabel_15.TextWrapped = true
+
+SettingsFE.Name = "SettingsFE"
+SettingsFE.Parent = GradientFE
+SettingsFE.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+SettingsFE.BorderSizePixel = 0
+SettingsFE.Position = UDim2.new(0.766810596, 0, 0.0168776363, 0)
+SettingsFE.Size = UDim2.new(0, 77, 0, 28)
+SettingsFE.ZIndex = 2
+SettingsFE.Font = Enum.Font.GothamSemibold
+SettingsFE.Text = ""
+SettingsFE.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsFE.TextScaled = true
+SettingsFE.TextSize = 14.000
+SettingsFE.TextWrapped = true
+SettingsFE.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = true
+end)
+
+Shadow_16.Name = "Shadow"
+Shadow_16.Parent = SettingsFE
+Shadow_16.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_16.BorderSizePixel = 0
+Shadow_16.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_16.Parent = SettingsFE
+TextLabel_16.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_16.BorderSizePixel = 0
+TextLabel_16.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_16.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_16.ZIndex = 2
+TextLabel_16.Font = Enum.Font.GothamSemibold
+TextLabel_16.Text = "Settings"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextScaled = true
+TextLabel_16.TextSize = 14.000
+TextLabel_16.TextWrapped = true
+
+FE.Name = "FE"
+FE.Parent = GradientFE
+FE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FE.BackgroundTransparency = 1.000
+FE.Position = UDim2.new(0, 0, 0.084388189, 0)
+FE.Size = UDim2.new(0, 200, 0, 27)
+FE.Font = Enum.Font.Merriweather
+FE.Text = "FE                                          _________________"
+FE.TextColor3 = Color3.fromRGB(0, 0, 0)
+FE.TextScaled = true
+FE.TextSize = 14.000
+FE.TextWrapped = true
+
+SettingsFrame.Name = "Settings Frame"
+SettingsFrame.Parent = ScreenGui
+SettingsFrame.Active = true
+SettingsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsFrame.BackgroundTransparency = 1.000
+SettingsFrame.Position = UDim2.new(0.0560000017, 0, 0.0979999974, 0)
+SettingsFrame.Size = UDim2.new(0, 406, 0, 474)
+SettingsFrame.Visible = false
+SettingsFrame.Draggable = true
+
+GradientS.Name = "GradientS"
+GradientS.Parent = SettingsFrame
+GradientS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GradientS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+GradientS.BorderSizePixel = 0
+GradientS.Size = UDim2.new(0, 406, 0, 474)
+
+UIGradientS.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradientS.Name = "UIGradientS"
+UIGradientS.Parent = GradientS
+
+UICornerS.CornerRadius = UDim.new(0, 4)
+UICornerS.Name = "UICornerS"
+UICornerS.Parent = GradientS
+
+MainS.Name = "MainS"
+MainS.Parent = GradientS
+MainS.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainS.BorderSizePixel = 0
+MainS.Position = UDim2.new(0.0229681972, 0, 0.0126582282, 0)
+MainS.Size = UDim2.new(0, 77, 0, 28)
+MainS.ZIndex = 2
+MainS.Font = Enum.Font.GothamSemibold
+MainS.Text = ""
+MainS.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainS.TextScaled = true
+MainS.TextSize = 14.000
+MainS.TextWrapped = true
+MainS.MouseButton1Click:connect(function()
+	MainFrame.Visible = true
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_17.Name = "Shadow"
+Shadow_17.Parent = MainS
+Shadow_17.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_17.BorderSizePixel = 0
+Shadow_17.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_17.Parent = MainS
+TextLabel_17.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.BackgroundTransparency = 1.000
+TextLabel_17.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_17.BorderSizePixel = 0
+TextLabel_17.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_17.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_17.ZIndex = 2
+TextLabel_17.Font = Enum.Font.GothamSemibold
+TextLabel_17.Text = "Main"
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.TextScaled = true
+TextLabel_17.TextSize = 14.000
+TextLabel_17.TextWrapped = true
+
+LocalPlayerS.Name = "Local PlayerS"
+LocalPlayerS.Parent = GradientS
+LocalPlayerS.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LocalPlayerS.BorderSizePixel = 0
+LocalPlayerS.Position = UDim2.new(0.279125839, 0, 0.0126582282, 0)
+LocalPlayerS.Size = UDim2.new(0, 77, 0, 28)
+LocalPlayerS.ZIndex = 2
+LocalPlayerS.Font = Enum.Font.GothamSemibold
+LocalPlayerS.Text = ""
+LocalPlayerS.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerS.TextScaled = true
+LocalPlayerS.TextSize = 14.000
+LocalPlayerS.TextWrapped = true
+LocalPlayerS.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = true
+	SettingsFrame.Visible = false
+end)
+
+Shadow_18.Name = "Shadow"
+Shadow_18.Parent = LocalPlayerS
+Shadow_18.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_18.BorderSizePixel = 0
+Shadow_18.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_18.Parent = LocalPlayerS
+TextLabel_18.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 1.000
+TextLabel_18.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_18.BorderSizePixel = 0
+TextLabel_18.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_18.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_18.ZIndex = 2
+TextLabel_18.Font = Enum.Font.GothamSemibold
+TextLabel_18.Text = "local player"
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.TextScaled = true
+TextLabel_18.TextSize = 14.000
+TextLabel_18.TextWrapped = true
+
+FeS.Name = "FeS"
+FeS.Parent = GradientS
+FeS.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+FeS.BorderSizePixel = 0
+FeS.Position = UDim2.new(0.510652959, 0, 0.0168776363, 0)
+FeS.Size = UDim2.new(0, 77, 0, 28)
+FeS.ZIndex = 2
+FeS.Font = Enum.Font.GothamSemibold
+FeS.Text = ""
+FeS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FeS.TextScaled = true
+FeS.TextSize = 14.000
+FeS.TextWrapped = true
+FeS.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = true
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end)
+
+Shadow_19.Name = "Shadow"
+Shadow_19.Parent = FeS
+Shadow_19.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_19.BorderSizePixel = 0
+Shadow_19.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_19.Parent = FeS
+TextLabel_19.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.BackgroundTransparency = 1.000
+TextLabel_19.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_19.BorderSizePixel = 0
+TextLabel_19.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_19.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_19.ZIndex = 2
+TextLabel_19.Font = Enum.Font.GothamSemibold
+TextLabel_19.Text = "FE"
+TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.TextScaled = true
+TextLabel_19.TextSize = 14.000
+TextLabel_19.TextWrapped = true
+
+SettingsS.Name = "SettingsS"
+SettingsS.Parent = GradientS
+SettingsS.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+SettingsS.BorderSizePixel = 0
+SettingsS.Position = UDim2.new(0.766810596, 0, 0.0168776363, 0)
+SettingsS.Size = UDim2.new(0, 77, 0, 28)
+SettingsS.ZIndex = 2
+SettingsS.Font = Enum.Font.GothamSemibold
+SettingsS.Text = ""
+SettingsS.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsS.TextScaled = true
+SettingsS.TextSize = 14.000
+SettingsS.TextWrapped = true
+SettingsS.MouseButton1Click:connect(function()
+	MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = true
+end)
+
+Shadow_20.Name = "Shadow"
+Shadow_20.Parent = SettingsS
+Shadow_20.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_20.BorderSizePixel = 0
+Shadow_20.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel_20.Parent = SettingsS
+TextLabel_20.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.BackgroundTransparency = 1.000
+TextLabel_20.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_20.BorderSizePixel = 0
+TextLabel_20.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_20.Size = UDim2.new(1, -20, 1, -20)
+TextLabel_20.ZIndex = 2
+TextLabel_20.Font = Enum.Font.GothamSemibold
+TextLabel_20.Text = "Settings"
+TextLabel_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.TextScaled = true
+TextLabel_20.TextSize = 14.000
+TextLabel_20.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = GradientS
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.Position = UDim2.new(0, 0, 0.084388189, 0)
+Settings.Size = UDim2.new(0, 200, 0, 27)
+Settings.Font = Enum.Font.Merriweather
+Settings.Text = "Settings                                          _________________"
+Settings.TextColor3 = Color3.fromRGB(0, 0, 0)
+Settings.TextScaled = true
+Settings.TextSize = 14.000
+Settings.TextWrapped = true
+
+WhitelistFrame.Name = "Whitelist Frame"
+WhitelistFrame.Parent = ScreenGui
+WhitelistFrame.Active = true
+WhitelistFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WhitelistFrame.BackgroundTransparency = 1.000
+WhitelistFrame.Position = UDim2.new(0.381372541, 0, 0.382402688, 0)
+WhitelistFrame.Size = UDim2.new(0, 226, 0, 138)
+WhitelistFrame.Image = "rbxassetid://3570695787"
+WhitelistFrame.ScaleType = Enum.ScaleType.Slice
+WhitelistFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+WhitelistFrame.SliceScale = 0.120
+WhitelistFrame.Draggable = false
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 70, 70)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 144, 144))}
+UIGradient.Parent = WhitelistFrame
+
+WLTitle.Name = "WL Title"
+WLTitle.Parent = WhitelistFrame
+WLTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WLTitle.BackgroundTransparency = 1.000
+WLTitle.Position = UDim2.new(0.0575221255, 0, 0.0507246368, 0)
+WLTitle.Size = UDim2.new(0, 198, 0, 31)
+WLTitle.Font = Enum.Font.Merriweather
+WLTitle.Text = "Deem Key System"
+WLTitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+WLTitle.TextScaled = true
+WLTitle.TextSize = 14.000
+WLTitle.TextWrapped = true
+
+WhitelistBox.Name = "Whitelist Box"
+WhitelistBox.Parent = WhitelistFrame
+WhitelistBox.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+WhitelistBox.BackgroundTransparency = 1.000
+WhitelistBox.BorderSizePixel = 0
+WhitelistBox.Position = UDim2.new(0.185840696, 0, 0.355072469, 0)
+WhitelistBox.Size = UDim2.new(0, 140, 0, 39)
+WhitelistBox.ZIndex = 2
+WhitelistBox.Font = Enum.Font.Merriweather
+WhitelistBox.PlaceholderText = "key here"
+WhitelistBox.Text = ""
+WhitelistBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+WhitelistBox.TextSize = 14.000
+WhitelistBox.TextWrapped = true
+
+WhitelistBox_Roundify_12px.Name = "Whitelist Box_Roundify_12px"
+WhitelistBox_Roundify_12px.Parent = WhitelistBox
+WhitelistBox_Roundify_12px.Active = true
+WhitelistBox_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+WhitelistBox_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WhitelistBox_Roundify_12px.BackgroundTransparency = 1.000
+WhitelistBox_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+WhitelistBox_Roundify_12px.Selectable = true
+WhitelistBox_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+WhitelistBox_Roundify_12px.Image = "rbxassetid://3570695787"
+WhitelistBox_Roundify_12px.ImageColor3 = Color3.fromRGB(52, 52, 52)
+WhitelistBox_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+WhitelistBox_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+WhitelistBox_Roundify_12px.SliceScale = 0.120
+
+EnterButton.Name = "Enter Button"
+EnterButton.Parent = WhitelistFrame
+EnterButton.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+EnterButton.BackgroundTransparency = 1.000
+EnterButton.BorderSizePixel = 0
+EnterButton.Position = UDim2.new(0.340707958, 0, 0.717391312, 0)
+EnterButton.Size = UDim2.new(0, 70, 0, 28)
+EnterButton.ZIndex = 2
+EnterButton.Font = Enum.Font.SourceSans
+EnterButton.Text = "Enter"
+EnterButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+EnterButton.TextSize = 14.000
+EnterButton.MouseButton1Click:Connect(function()
+	if WhitelistBox.Text == "Test" then
+		WhitelistBox.Text = "Checking Whitelist"
+		wait(1)
+		WhitelistBox.Text = "Checking Whitelist."
+		wait(1)
+		WhitelistBox.Text = "Checking Whitelist.."
+		wait(1)
+		WhitelistBox.Text = "Checking Whitelist..."
+		wait(1)
+		WhitelistBox.Text = "Authentication Success."
+		wait(1)
+		StartingFrame.Visible = true
+		WhitelistFrame.Visible = false
+		mouse.KeyDown:connect(function(key)
+if key == bind then
+    MainFrame.Visible = false
+	StartingFrame.Visible = false
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end
+end)
+
+mouse.KeyDown:connect(function(key)
+if key == bind2 then
+    MainFrame.Visible = false
+	StartingFrame.Visible = true
+	FEFrame.Visible = false
+	LocalPlayerFrame.Visible = false
+	SettingsFrame.Visible = false
+end
+end)
+	elseif WhitelistBox.Text ~= "Test" then
+		WhitelistBox.Text = "Checking Whitelist"
+		wait(1)
+		WhitelistBox.Text = "Checking Whitelist."
+		wait(1)
+		WhitelistBox.Text = "Checking Whitelist.."
+		wait(1)
+		WhitelistBox.Text = "Checking Whitelist..."
+		wait(1)
+		WhitelistBox.Text = "Authentication Failed."
+	end
+end)
+
+EnterButton_Roundify_12px.Name = "Enter Button_Roundify_12px"
+EnterButton_Roundify_12px.Parent = EnterButton
+EnterButton_Roundify_12px.Active = true
+EnterButton_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+EnterButton_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterButton_Roundify_12px.BackgroundTransparency = 1.000
+EnterButton_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+EnterButton_Roundify_12px.Selectable = true
+EnterButton_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+EnterButton_Roundify_12px.Image = "rbxassetid://3570695787"
+EnterButton_Roundify_12px.ImageColor3 = Color3.fromRGB(52, 52, 52)
+EnterButton_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+EnterButton_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+EnterButton_Roundify_12px.SliceScale = 0.120
